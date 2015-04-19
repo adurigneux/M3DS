@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+
+<scene>
+
+
+    <light x="4"  y="0" z="0" intensity="1" />
+    <light x="0"  y="5" z="0" intensity="1" />
+    <light x="0"  y="0" z="4" intensity="1" />
+ <node operation="union">
+
+  <primitive type="cube">
+    <translate x="0" y="0" z="-2.5" />
+    <scale x="20" y="20" z="1" />
+    <diffuse red="0.8" green="0.2" blue="0" />
+    <reflection coefficient="0.2" />
+  </primitive>
+
+    <node operation="union">
+        <translate x="0" y="0" z="0" />
+        <reflection coefficient="0.2" />
+
+        <primitive type="cone">
+            <rotate angle="90" x="1" y="0" z="0" />
+            <translate x="0" y="3" z="0" />
+            <scale x="1.5" y="1.5" z="1.5" />
+            <diffuse red="1.0" green="0.0" blue="0.0" />
+            <specular red="0.2" green="0.7" blue="0.1" shininess="100"/>
+            <ambient red="0.1" green="0.1" blue="0.1" />
+        </primitive>
+
+        <node operation="difference">
+          <translate x="0" y="0" z="0" />
+          <scale x="1.5" y="1.5" z="1.5" />
+
+          <primitive type="cube">
+            <diffuse red="0.8" green="0.2" blue="0" />
+            <ambient red="0.1" green="0" blue="0" />
+            <specular red="0.1" green="0.7" blue="0" shininess="100" />
+            </primitive>
+
+          <primitive type="sphere">
+            <scale x="1.2" y="1.2" z="1.2" />
+            <diffuse red="0.0" green="0.2" blue="0.7" />
+            <ambient red="0.0" green="0.0" blue="0.1" />
+          </primitive>
+        </node>
+    </node>
+</node>
+
+</scene>

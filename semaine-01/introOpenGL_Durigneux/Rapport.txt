@@ -1,0 +1,53 @@
+Question 7. Quel est le rôle d’un VBO ? d’un VAO ? d’un Program Shader ?
+
+VBO : Vertex Buffer Object
+Représente les données stockées dans la VRAM utilisées par OpenGl, simplement des octets, aucunes représentations.
+Permet le stockage d'informations dans la mémoire d'OpenGl.
+Copier les données utilisées par l'application dans un buffer d'OpenGl.
+
+VAO : Vertex Array Object
+Le rôle d’un VAO est d’indiquer quelles seront les valeurs des attributs du vertex shader actif lors du tracé : il fait le
+lien entre les buffers et les attributs des shaders
+
+Permet d'indiquer quel VBO sera utilisé pour alimenter chaque shaders.
+
+
+P Shader :
+C'est un programme qui est codé en GLSL, permet de définir le code à executer par la carte graphique pour chaque pixel.
+Code tres // sur la carte graph.
+
+
+
+Question 10. Pour retrouver nos 2 triangles précédents, sans modifier les données, il faut tracer les sommets selon quel ordre ?
+On peut redéfinir l'ordre dans lequel les sommets seront utilisés.
+_elementData = {
+    0,3,2,5,1,4
+};
+
+
+Question 12. On retrouve bien nos 2 triangles, mais vous devez constater une différence par rapport au résultat précédent
+(cf image Question 8). Expliquez (Sur quels attributs s’appliquent l’ordre des indices de GL_ELEMENT_ARRAY_BUFFER ?).
+les couleurs sont définies non pas sur l'ordre dans lequel les sommets sont selectionnes mais bien l'ordre dans lesquels ils sont définis dans le tableau des coordonnées des sommets.
+De cette facon, les couleurs utilisées et définies étant à d'autres endroits, la moyenne pondéres donera donc des couleurs differentes.
+
+
+Question 13:
+Le sommet dupliqué contenant un attribut de couleur, peut importe le triangle avec lequel il est utilisé, sa couleur rest ela meme.
+de ce fait, un meme point est utilisé 2 fois avec la mémé couleur., si on voulait utiliser 2 couleurs differentes, il fallait alors duplique le point, pour faire une correspondace couleur et sommet unique.
+
+
+
+
+Donnees  = VBO
+VAO
+Shaders (vertex/fragment)
+ -attributs de sommets
+ -interpolation(varrying)
+  -uniform
+
+texture:
+ -coordonees de textures (attribut)
+  -interpolation (in et ou)
+Draw :
+ -Elements
+ -Arrays

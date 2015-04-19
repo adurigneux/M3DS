@@ -1,0 +1,25 @@
+Q7 :
+Afin d'assigner une couleur pour chaque sommet, il faut définir chaque sommet séparement.
+En effet, un sommet ne peut contenir qu'une seule couleur, de ce fait il faut dupliquer les sommets utilisés plusieurs fois
+
+La éléments sont pris a la suite pour chaque triangle, suite logique de 0 a 11 (12 elements)
+
+il faut donc dupliquer également les couleurs pour chaque sommet, afin de définir une couleur uniforme pour chaque triangle.
+
+
+
+q8 :
+on affiche les couleurs les plus eloignées, a savoir depth(src) < depth(dest)
+
+
+q9
+1. on affiche les valeurs dont le z est plus grand que 1, soit aucune valeur, de ce fait tout est blanc
+2. seul le triangle vert et magenta sont affiché, car ils possedent des sommets positionnés en z = 1 , soit plus grand que 0
+alors que les autres triangles sont en position 0 ( du a la normalisation)
+3.Les valeurs prises sont entre 0.5 et 1 , de ce fait seul la moitié du plan z est prise en compte, c'e'st pourquoi la forme est coupée en certains points etant positisionné en 0
+
+
+q13
+Il ne s'agit que d'une modification de la position de la camera, de ce fait si on définit une fenetre plus petite que la forme, on aura un effet de zoom, et inversement si on augmente la taille de la fenetre
+
+
